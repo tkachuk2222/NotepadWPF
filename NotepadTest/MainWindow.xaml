@@ -1,0 +1,45 @@
+﻿<Window x:Class="NotepadTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NotepadTest"
+        mc:Ignorable="d"
+        Title="NotepadWPFbyTkachuk" Height="350" Width="525" 
+        Loaded="Window_Loaded"
+        Closing="Window_Closing">
+    <DockPanel Margin="1">
+        <Menu DockPanel.Dock="Top">
+            <Menu.Items>
+                <MenuItem Header="File">
+                    <MenuItem Header="New"></MenuItem>
+                    <MenuItem Header="Open" Name="btnOpenFile" Click="btnOpenFile_Click"></MenuItem>
+                    <MenuItem Header="Save" Name="btnSaveFile" Click="btnSaveFile_Click"></MenuItem>
+                    <MenuItem Header="Save us..." Name="btnSaveUs" Click="btnSaveUs_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Format">
+                    <MenuItem Header="Font size" Name="fontSize" Click="fontSize_Click"></MenuItem>
+                    <MenuItem Header="Font color" Name="fontColor" Click="fontColor_Click"></MenuItem>
+                    <MenuItem Header="Background color" Name="BgrdColor" Click="BgrdColor_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Edit">
+                    <MenuItem Header="Copy" Name="btnCopy" Click="btnCopy_Click"></MenuItem>
+                    <MenuItem Header="Paste" Name="btnPaste" Click="btnPaste_Click"></MenuItem>
+                    <MenuItem Header="Cut" Name="btnCut" Click="btnCut_Click"></MenuItem>
+                    <MenuItem Header="Delete" Name="btnDelete" Click="btnDelete_Click"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Select all" Name="btnSelectAll" Click="btnSelectAll_Click"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="Date time" Name="btnDateTime" Click="btnDateTime_Click"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Status">
+                    <MenuItem Header="Update status" Name="updateStatusFile" Click="updateStatusFile_Click"></MenuItem>
+                </MenuItem>
+            </Menu.Items>
+        </Menu>
+        <DockPanel>
+            <TextBox DockPanel.Dock="Bottom" VerticalScrollBarVisibility="Visible" AcceptsTab="True" AcceptsReturn="True" Name="textBox"/>
+        </DockPanel>
+    </DockPanel>
+    
+</Window>
